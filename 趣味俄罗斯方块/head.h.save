@@ -1,0 +1,48 @@
+#ifndef HEAD_H_INCLUDED
+#define HEAD_H_INCLUDED
+#include<stdio.h>
+#include<windows.h>
+#include<stdlib.h>
+#include<time.h>
+#include<conio.h>
+#define F1 11  //亮蓝绿色
+#define F2 14  //黄色
+#define F3 10  //亮绿色
+#define F4 5  //紫色
+#define F5 12  //红色
+#define WIDTH 40
+#define HEIGHT 25
+#define STARTX 32
+#define STARTY 5
+typedef struct fangkuai
+{
+    int mfx;
+    int mfy;
+    int fx2;
+    int fy2;
+    int fx3;
+    int fy3;
+    int fx4;
+    int fy4;
+}fang;
+typedef struct setting
+{
+    int curi;
+    int curj;
+    int nexti;
+    int nextj;
+    int score;
+    int speed;
+    int leval;
+}st;
+void color(int n);
+void gotoxy(int x,int y);
+void menu();
+int choose();
+void anjian();
+void guize();
+void game();
+void gamemenu();
+void show(st*p);
+void initst(st*p);
+#endif // HEAD_H_INCLUDED
